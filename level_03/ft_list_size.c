@@ -45,7 +45,7 @@ t_list *new(void *data)
 }
 int main ()
 {
-	t_list *p, *s, *j;// *t;
+	t_list *one, *two, *three;
 	one = new ("one");
 	two = new("two");
 	three = new ("three");
