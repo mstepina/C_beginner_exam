@@ -46,13 +46,11 @@ t_list *new(void *data)
 int main ()
 {
 	t_list *p, *s, *j;// *t;
-	p = new ("one");
-	s = new("two");
-	j = new ("three");
-	//t = new ("four");
-	p ->next = s;
-	s->next = j;
-	//j->next = t;
+	one = new ("one");
+	two = new("two");
+	three = new ("three");
+	one ->next = two;
+	two->next = three;
 	printf("%d\n", ft_list_size(p));
 	return (0);
 }
