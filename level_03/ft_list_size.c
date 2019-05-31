@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list_size.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mstepina <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mstepina <mstepina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/13 22:17:49 by mstepina          #+#    #+#             */
-/*   Updated: 2019/05/13 23:19:16 by mstepina         ###   ########.fr       */
+/*   Updated: 2019/05/31 16:28:06 by mstepina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,13 @@ t_list *new(void *data)
 }
 int main ()
 {
-	t_list *p, *s, *j;// *t;
-	p = new ("one");
-	s = new("two");
-	j = new ("three");
-	//t = new ("four");
-	p ->next = s;
-	s->next = j;
-	//j->next = t;
-	printf("%d\n", ft_list_size(p));
+	t_list *one, *two, *three; 
+	one = new ("one");
+	two = new("two");
+	three = new ("three");
+	one ->next = two;
+	two->next = three;
+	printf("%d\n", ft_list_size(one));
 	return (0);
 }
 */
