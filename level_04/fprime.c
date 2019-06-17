@@ -13,45 +13,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int is_prime(int n)
-{
-	int i;
-
-	i = 2;
-	while (i < n)
-	{
-		if( n % i == 0)
-			return (0);
-		i++;
-	}
-	return (1);
-}
-
-
-int main(int ac, char **av)
+int		main(int ac, char **av)
 {
 	int n;
 	int i;
 
-	i = 2;
-	if(ac == 2)
+	if (ac == 2)
 	{
+		i = 2;
 		n = atoi(av[1]);
-		if (is_prime(n))
-			printf("%d", n);
-		else
+		if (n == 1)
+			printf("1");
+		while (i <= n)
 		{
-			while (i <= n)	
+			while (n % i == 0)
 			{
-				while (is_prime(i) && (n % i == 0))
-				{
-					printf("%d", i);
-					if (i < n)
-						printf("%s", "*");
-					n = n / i;	
-				}
-				i++;
+				printf("%d", i);
+				if (i < n)
+					printf("*");
+				n = n / i;
 			}
+			i++;
 		}
 	}
 	printf("\n");
