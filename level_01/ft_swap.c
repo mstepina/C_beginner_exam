@@ -18,3 +18,16 @@ void ft_swap(int *a, int *b)
 	*a = *b;
 	*b = temp;
 }
+
+/*
+#include <stdio.h>
+int main()
+{
+	int a;
+	int b;
+	a = 5;
+	b = 6;
+	ft_swap(&a, &b);
+	printf("%d\n%d", a, b);
+}
+*/
